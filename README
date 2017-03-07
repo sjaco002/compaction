@@ -1,0 +1,40 @@
+MBtree.insert is where we are storing these write times
+
+needKeyDupCheck should be false so we only see the real reads
+
+When connected to ssh, http://localhost:19001 can use the cluster
+
+
+parameters to set in asterix-configuration.xml:
+		buffercachepagesize:131072
+
+		memorycomponentpagesize:131072
+
+		memorycomponent num of pages:256
+
+		HOW MANY in-memroy components per index:1 (default is 2. Set to 1 or 2)
+
+		memory for the buffer cache:3221225472
+
+		bloom filter ratio: .01
+
+Steps to run simulation:
+	On bigtable:
+		Run everything.sh 
+			starts instance by copying in local.xml and asterix-configuration.xml
+			Runs startFeed.sh
+				creates datasets and feed
+				(more exmples in sampleParametersForSetup.txt)
+	on dblab-server
+		Run sendTweets.py
+			Sendsthe tweets and updates to search_id
+		Or SendTweetsAndSearch.py 
+			Sends just the tweets
+	on bigtable
+		Run startProecure.sh 
+			Creates and starts the read procedure
+		Or Run startRangeQuery.sh
+			Runs the range query, pausing for 1 second between runs
+		Run copyFiles.sh
+			Greps from the asterix logs and collects results in csv folder
+		
