@@ -26,15 +26,16 @@ Steps to run simulation:
 				creates datasets and feed
 				(more exmples in sampleParametersForSetup.txt)
 	on dblab-server
-		Run sendTweets.py
+		SendTweetsAndSearch.py 
 			Sendsthe tweets and updates to search_id
-		Or SendTweetsAndSearch.py 
+		sendTweets.py
 			Sends just the tweets
 	on bigtable
-		Run startProecure.sh 
+		Run startProcecure.sh 
 			Creates and starts the read procedure
 		Or Run startRangeQuery.sh
 			Runs the range query, pausing for 1 second between runs
+	when complete, on bigtable:
 		Run copyFiles.sh
 			Greps from the asterix logs and collects results in csv folder
 		

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-end=$((SECONDS+3600))
+end=$((SECONDS+34400))
 while [  $SECONDS -lt $end ]; do
 	seconds=$((SECONDS+1))
 	mx=$((seconds * 9000 - 5000))
