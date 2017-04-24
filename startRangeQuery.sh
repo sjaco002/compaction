@@ -1,7 +1,7 @@
 #!/bin/sh
 
 RANDOM=$$
-end=$((SECONDS+43200))
+end=$((SECONDS+86400))
 while [  $SECONDS -lt $end ]; do
 	seconds=$((SECONDS+1))
 	total=$((seconds * 2000))
