@@ -11,7 +11,7 @@ for line in f1:
 	if (splitLine[4] == "Write"):
 		writeString = splitLine[6] + "," + splitLine[10] + "\n"
 		f4.write(writeString)
-	elif (splitLine[4] == "Read"):
+	elif (splitLine[4] == "Read" and splitLine[5] == "micro:"):
 		writeString = splitLine[6] + "," + splitLine[10] + "\n"
 		f2.write(writeString)
 	elif (splitLine[4] == "Read:"):

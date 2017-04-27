@@ -4,21 +4,8 @@ curl -G -H "Accept: application/x-adm" -v --data-urlencode 'aql=drop dataverse e
 create dataverse experiments;
 use dataverse experiments;
 
-create type TwitterUserType as closed {
-    screen_name: string,
-    language: string,
-    friends_count: int32,
-    status_count: int32,
-    name: string,
-    followers_count: int32
-}
-
-
 create type TweetMessageType as closed {
     id: int64,
-    user: TwitterUserType,
-    latitude: float,
-    longitude: float,
     message_text: string,
     created_at: string,
     country:string
