@@ -31,10 +31,10 @@ Steps to run simulation:
 		sendTweets.py
 			Sends just the tweets
 	on bigtable
-		Run startProcecure.sh 
-			Creates and starts the read procedure
-		Or Run startRangeQuery.sh
-			Runs the range query, pausing for 1 second between runs
+		Run nohup ./startKeyQuery.sh &
+			Runs the  query, pausing for 1 second between runs
+		Run nohup ./startCountQuery.sh > totals.out & 
+			Runs the  total count query every ten minutes
 	when complete, on bigtable:
 		Run copyFiles.sh
 			Greps from the asterix logs and collects results in csv folder

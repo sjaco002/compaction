@@ -122,7 +122,7 @@
 
   <property>
     <name>storage.lsm.bloomfilter.falsepositiverate</name>
-    <value>0.01</value>
+    <value>0.90</value>
     <description>The maximum acceptable false positive rate for bloom
       filters associated with LSM indexes. (Default = "0.01" // 1%)
     </description>
