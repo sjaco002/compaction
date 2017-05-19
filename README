@@ -28,13 +28,13 @@ Steps to run simulation:
 	on dblab-server
 		SendTweetsAndSearch.py 
 			Sendsthe tweets and updates to search_id
-		sendTweets.py
+		screen -dm nohup python sendTweets.py	
 			Sends just the tweets
 	on bigtable
-		Run nohup ./startKeyQuery.sh &
+		Run screen -dm nohup bash startKeyQuery.sh > nohup.out
 			Runs the  query, pausing for 1 second between runs
-		Run nohup ./startCountQuery.sh > totals.out & 
-			Runs the  total count query every ten minutes
+		Run screen -dm nohup bash startCountQuery.sh > totals.out & 
+			Runs the  total count query every hour
 	when complete, on bigtable:
 		Run copyFiles.sh
 			Greps from the asterix logs and collects results in csv folder

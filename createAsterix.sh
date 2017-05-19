@@ -3,7 +3,7 @@ cd ..
 rm -rf asterix-mgmt
 mkdir asterix-mgmt
 cd asterix-mgmt
-unzip ../asterix-installer-0.9.1-SNAPSHOT-binary-assembly.zip
+unzip ../asterix-installer-0.9.2-SNAPSHOT-binary-assembly.zip
 export MANAGIX_HOME=`pwd`
 export PATH=$PATH:$MANAGIX_HOME/bin
 rm conf/asterix-configuration.xml

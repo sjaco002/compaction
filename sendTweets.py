@@ -16,8 +16,9 @@ i = 0
 t_end = time.time() + 60 * 60 * 8 
 
 while(time.time() < t_end):
-		num = randint(0,80300000);
+		num = randint(0,803000000);
         	sock1.sendall(line +  str(num) + lineEnd)
         	i=i+1
+		print i
 
 sock1.close()

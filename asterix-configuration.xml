@@ -122,7 +122,7 @@
 
   <property>
     <name>storage.lsm.bloomfilter.falsepositiverate</name>
-    <value>0.90</value>
+    <value>0.01</value>
     <description>The maximum acceptable false positive rate for bloom
       filters associated with LSM indexes. (Default = "0.01" // 1%)
     </description>
@@ -154,7 +154,7 @@
 
   <property>
     <name>txn.log.checkpoint.lsnthreshold</name>
-    <value>67108864</value>
+    <value>64MB</value>
     <description>The size of the window that the maximum LSN is allowed to
       be ahead of the checkpoint LSN by. (Default = ""67108864" // 64M)
     </description>
@@ -270,7 +270,7 @@
 
   <property>
     <name>log.level</name>
-    <value>INFO</value>
+    <value>SEVERE</value>
     <description>The minimum log level to be displayed. (Default = INFO)
     </description>
   </property>
