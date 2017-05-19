@@ -33,7 +33,7 @@ Steps to run simulation:
 	on bigtable
 		Run screen -dm nohup bash startKeyQuery.sh > nohup.out
 			Runs the  query, pausing for 1 second between runs
-		Run screen -dm nohup bash startCountQuery.sh > totals.out & 
+		Run cd totals && screen -dm nohup bash ../startCountQuery.sh > nohup.out
 			Runs the  total count query every hour
 	when complete, on bigtable:
 		Run copyFiles.sh
