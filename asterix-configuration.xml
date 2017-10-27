@@ -59,7 +59,7 @@
 
   <property>
     <name>storage.buffercache.size</name>
-    <value>536870912</value>
+    <value>1.5GB</value>
     <description>The size of memory allocated to the disk buffer cache.
       The value should be a multiple of the buffer cache page size(Default
       = "536870912" // 512MB)
