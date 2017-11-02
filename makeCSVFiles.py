@@ -4,8 +4,6 @@ f1 = open('log.txt', 'r')
 f7 = open('nohup.out', 'r')
 f2 = open('csv/readTimes.csv', 'w')
 f19 = open('csv/MergeSizes.csv', 'w')
-f20 = open('csv/MergeStacks.csv', 'w')
-f21 = open('csv/MergeMeta.csv', 'w')
 f4 = open('csv/writes.csv', 'w')
 f6 = open('csv/compactionTimes.csv', 'w')
 f8 = open('csv/readHits.csv', 'w')
@@ -17,21 +15,11 @@ for line in f1:
 	if (len(splitLine) < 4):
 		writeLine = ""	
 	elif (splitLine[1] == "Merged:"):
-		writeString = "0," + splitLine[2][:-1] + "," + splitLine[3][:-1] + "," + splitLine[4] + "," + splitLine[8] + "\n"
+		writeString = "0," + splitLine[2][:-1] + "," + splitLine[3][:-1] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[9] + "\n"
 		f19.write(writeString)
 	elif (splitLine[1] == "Full"):
-		writeString = "1," + splitLine[2][:-1] + "," + splitLine[3][:-1] + "," + splitLine[4] + "," + splitLine[8]  + "\n"
+		writeString = "1," + splitLine[2][:-1] + "," + splitLine[3][:-1] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[9] + "\n"
 		f19.write(writeString)
-	elif (splitLine[2] == "Snapshot:"):
-		writeString = splitLine[3] + "\n"	
-		f20.write(writeString)
-	elif (splitLine[3] == "Snapshot:"):
-		writeString = splitLine[4] + "\n"	
-		f20.write(writeString)
-	elif (splitLine[2] == "Compaction:"):
-		splitParts = splitLine[3].split(",")
-		writeString = splitParts[0] + "," + splitParts[1] + "," + splitParts[2]
-		f21.write(writeString)
 	elif (splitLine[4] == "Write"):
 		writeString = splitLine[6] + "," + splitLine[10] + "\n"
 		f4.write(writeString)
