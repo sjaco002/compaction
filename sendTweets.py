@@ -13,12 +13,18 @@ lineEnd="\"),\"message_text\":\" like sprint its platform is amazing\",\"created
 i = 0
 
 #last number is the number of minutes  to run
-t_end = time.time() + 60 * 60 * 8 
+t_end = time.time() + 60 * 60 * 7
 
 while(time.time() < t_end):
-		num = randint(0,803000000);
+	#fiveFromNow = time.time() + 60 * 10
+	#while (time.time() < fiveFromNow):
+		#num = randint(0,80300000);
+		num = randint(0,800000000);
         	sock1.sendall(line +  str(num) + lineEnd)
         	i=i+1
-		print i
+		#print num 
+		#break
+		#time.sleep(5)
+	#time.sleep(600)
 
 sock1.close()

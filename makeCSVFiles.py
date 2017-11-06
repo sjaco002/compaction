@@ -10,6 +10,7 @@ f8 = open('csv/readHits.csv', 'w')
 f9 = open('csv/readKeys.csv','w')
 f12 = open('csv/readTotalTimes.csv','w')
 f13 = open('csv/flushTimes.csv','w')
+f14 = open('csv/ReadTrace.csv','w')
 for line in f1:
 	splitLine = line.split(" ")
 	if (len(splitLine) < 4):
@@ -20,6 +21,9 @@ for line in f1:
 	elif (splitLine[1] == "Full"):
 		writeString = "1," + splitLine[2][:-1] + "," + splitLine[3][:-1] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[9] + "\n"
 		f19.write(writeString)
+	elif (splitLine[1] == "ReadTrace:"):
+		writeString =  splitLine[3] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[2] + "\n"
+		f14.write(writeString)
 	elif (splitLine[4] == "Write"):
 		writeString = splitLine[6] + "," + splitLine[10] + "\n"
 		f4.write(writeString)
