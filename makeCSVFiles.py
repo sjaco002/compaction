@@ -16,13 +16,13 @@ for line in f1:
 	if (len(splitLine) < 4):
 		writeLine = ""	
 	elif (splitLine[1] == "Merged:"):
-		writeString = "0," + splitLine[2][:-1] + "," + splitLine[3][:-1] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[9] + "\n"
+		writeString = "0," + splitLine[2][:-1] + "," + splitLine[3][:-1] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[11] + "\n"
 		f19.write(writeString)
 	elif (splitLine[1] == "Full"):
-		writeString = "1," + splitLine[2][:-1] + "," + splitLine[3][:-1] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[9] + "\n"
+		writeString = "1," + splitLine[2][:-1] + "," + splitLine[3][:-1] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[11] + "\n"
 		f19.write(writeString)
 	elif (splitLine[1] == "ReadTrace:"):
-		writeString =  splitLine[3] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[2] + "\n"
+		writeString =  splitLine[3] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[2] + "," + splitLine[12] + "," + splitLine[13] + "\n"
 		f14.write(writeString)
 	elif (splitLine[4] == "Write"):
 		writeString = splitLine[6] + "," + splitLine[10] + "\n"

@@ -1,5 +1,6 @@
 from socket import socket
 from random import randint
+from datetime import datetime as dt
 import time
 
 ip = '169.235.27.209'
@@ -19,10 +20,12 @@ while(time.time() < t_end):
 	#fiveFromNow = time.time() + 60 * 10
 	#while (time.time() < fiveFromNow):
 		#num = randint(0,80300000);
+		while(30 <= dt.now().minute <= 59):
+			time.sleep(30)
 		num = randint(0,800000000);
-        	sock1.sendall(line +  str(num) + lineEnd)
+        	#sock1.sendall(line +  str(num) + lineEnd)
         	i=i+1
-		#print num 
+		print num 
 		#break
 		#time.sleep(5)
 	#time.sleep(600)
