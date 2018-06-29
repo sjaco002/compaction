@@ -22,7 +22,7 @@ for line in f1:
 		writeString = "1," + splitLine[2][:-1] + "," + splitLine[3][:-1] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[11] + "\n"
 		f19.write(writeString)
 	elif (splitLine[1] == "ReadTrace:"):
-		writeString =  splitLine[3] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[2] + "," + splitLine[12] + "," + splitLine[13] + "\n"
+		writeString =  splitLine[3] + "," + splitLine[4] + "," + splitLine[8] + "," + splitLine[2] + "," + splitLine[12] + "," + splitLine[13] + "," + splitLine[14] + "\n"
 		f14.write(writeString)
 	elif (splitLine[4] == "Write"):
 		writeString = splitLine[6] + "," + splitLine[10] + "\n"
